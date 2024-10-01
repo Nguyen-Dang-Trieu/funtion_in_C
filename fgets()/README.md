@@ -9,7 +9,28 @@ Hàm `fgets()` tiếp tục đọc dữ liệu đầu vào cho đến khi một 
 - a new line character is encountered. (Gặp kí tự xuống dòng `\n`)
 - end of file is reached. (Đến khi gặp `EOF`)
 
-`Note:` Mặc dù hàm `fgets()` sẽ ngừng lấy dữ liệu đầu vào khi tìm thấy ký tự xuống dòng `\n` nhưng đáng ngạc nhiên là nó lại thêm ký tự đó vào cuối biến chuỗi của chúng ta.
+`Note:` Mặc dù hàm `fgets()` sẽ ngừng lấy dữ liệu đầu vào khi tìm thấy ký tự xuống dòng `\n` nhưng nó lại thêm ký tự đó vào cuối biến chuỗi của chúng ta.
+
+**Example**:
+~~~c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char buf[10] ="";
+    fgets(buf, 10, stdin);
+    printf("so luong phan tu: %ld\n", strlen(buf));
+    printf("buf: %s\n", buf);
+    return 0;
+}
+~~~
+**Output**:
+~~~
+so luong phan tu: 6
+buf: trieu
+~~~
+Ta thấy được số lượng phần tử ở đây là 6 mặc dù string input: trieu chỉ có 5 kí tự -> Nguyên nhân là kí tự xuống dòng `\n` đã được thêm vào chuỗi: `trieu\n\0`
 
 Để loại bỏ ký tự xuống dòng `\n`, có thể làm như sau:
 ~~~c
