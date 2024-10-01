@@ -1,1 +1,1 @@
-# funtion_in_C
+# Funtion in C
