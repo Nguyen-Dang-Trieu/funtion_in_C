@@ -1,3 +1,12 @@
+# Copy Functions
+- https://codingbison.com/c/c-string-library-copying-functions.html
+~~~c
+ char *strcpy(char *dest, const char *src);
+ char *strncpy(char *dest, const char *src, size_t n);
+ void *memcpy(void *dest, void *src, size_t n); 
+ void *memmove(void *dest, void *src, size_t n); 
+~~~
+
 ## Function strcpy()
 The function prototype of `strcpy()` is:
 ~~~c
