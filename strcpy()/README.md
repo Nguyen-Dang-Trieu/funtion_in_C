@@ -1,6 +1,5 @@
 # Copy Functions
 - https://codingbison.com/c/c-string-library-copying-functions.html
-- https://hikotech.net/post-100/
   
 ~~~c
  char *strcpy(char *dest, const char *src);
