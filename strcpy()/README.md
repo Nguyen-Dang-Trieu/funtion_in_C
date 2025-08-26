@@ -62,3 +62,27 @@ Parameters of `strncpy()` Function in C
 - The `destination` specifies a pointer that contains the address of the first character of the character array to which the string is to be copied.
 - The `source` specifies a pointer that contains the address of the first character of the character array from which the string is to be copied.
 - The `size` denotes the number of characters that should be copied from source to destination.
+
+Code mẫu
+~~~c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char src[] = "Hello, World!"; // có 13 kí tự trong chuỗi chưa tính \0
+    char dest[20];
+
+    // Copy tối đa 19 ký tự (để chừa 1 byte cho '\0')
+    strncpy(dest, src, sizeof(dest) - 1);
+
+    // Đảm bảo chuỗi dest luôn có '\0'
+    dest[sizeof(dest) - 1] = '\0';
+
+    printf("Dest: %s\n", dest);
+    return 0;
+}
+~~~
+**Output**
+~~~
+Dest: Hello, World!
+~~~
