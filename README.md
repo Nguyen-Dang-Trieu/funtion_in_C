@@ -5,4 +5,8 @@
 
 
 ## Dùng hàm
-snprintf()
+snprintf(dest, size, format, source)
+- dest: con trỏ tới buffer
+- size: kích thước của chuỗi
+- format: định dạng chuỗi
+- source: chuỗi đầu vào
