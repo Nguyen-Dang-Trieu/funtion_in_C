@@ -10,3 +10,10 @@ snprintf(dest, size, format, source)
 - size: kích thước của chuỗi
 - format: định dạng chuỗi
 - source: chuỗi đầu vào
+
+strcmp(const char* s1, const char* s2): hàm so sánh
+
+Return
+- 0: nếu s1 = s2
+- <0: nếu s1 < s2
+- >0: nếu s1 > s2
