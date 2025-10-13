@@ -20,3 +20,13 @@ Return
 - 0: nếu s1 = s2
 - <0: nếu s1 < s2
 - >0: nếu s1 > s2
+
+## memset()
+Cú pháp
+~~~c
+void * memset ( void * ptr, int value, size_t num );
+~~~
+**Tham số:**
+- `ptr`: trỏ đến vùng nhớ cần được set.
+- `value`: giá trị sử dụng để set các vùng nhớ.
+- `num`: số lượng bytes.
