@@ -49,3 +49,34 @@ int main()
 ~~~
 ------ every programmer should know memset!
 ~~~
+
+`memset()` trả về một con trỏ `void*` tới địa chỉ bắt đầu vùng nhớ mà nó vừa điền (tức là giá trị của tham số đầu tiên `ptr`)
+### Ví dụ 2
+~~~c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+  char str[] = "Nice to meet you";
+  
+  
+  void* addr_str = memset(str, '-', 4);
+  printf("%s\n", str);
+  
+  // Địa chỉ bắt đầu vùng nhớ lưu trữ chuỗi
+  printf("Địa chỉ bắt đầu của chuỗi str: %p\n", &str);
+  
+  printf("Địa chỉ của con trỏ addr_str: %p\n", &addr_str);
+  printf("Địa chỉ do memset trả về: %p\n", addr_str); 
+  
+  return 0;
+}
+~~~
+**Đầu ra của chương trình**
+~~~
+---- to meet you
+Địa chỉ bắt đầu của chuỗi str: 0x7fff31570a20
+Địa chỉ của con trỏ addr_str: 0x7fff31570a18
+Địa chỉ do memset trả về: 0x7fff31570a20
+~~~
