@@ -30,3 +30,22 @@ void * memset ( void * ptr, int value, size_t num );
 - `ptr`: trỏ đến vùng nhớ cần được set.
 - `value`: giá trị sử dụng để set các vùng nhớ.
 - `num`: số lượng bytes.
+
+### Ví dụ 1
+~~~c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+  char str[] = "almost every programmer should know memset!";
+  memset(str, '-', 6);
+  puts(str);
+  
+  return 0;
+}
+~~~
+**Đầu ra của chương trình:**
+~~~
+------ every programmer should know memset!
+~~~
