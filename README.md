@@ -80,3 +80,10 @@ int main()
 Địa chỉ của con trỏ addr_str: 0x7fff31570a18
 Địa chỉ do memset trả về: 0x7fff31570a20
 ~~~
+
+## Sự khác nhau giữa việc sử dụng `strcpy` vầ `strncpy`
+Hai hàm này đều copy một chuỗi từ `src` sang `dst` nhưng chúng khác nhau về hành vi và an toàn.
+- `strcpy`: copy toàn bộ chuỗi `src`, bao gồm kí tự `\0` tới buffer dest. Tuy nhiên hàm này không thực hiện bất kì kiểm tra ranh giới nào cho việc copy chuỗi.
+  - Nếu buffer src dài hơn buffer dst thì điều này sẽ gây ra buffer overflow.
+- `strncpy`: chỉ copy `n` kí tự từ buffer src sang buffer dst. 
+
