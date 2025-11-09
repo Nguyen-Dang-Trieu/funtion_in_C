@@ -87,3 +87,4 @@ Hai hàm này đều copy một chuỗi từ `src` sang `dst` nhưng chúng khá
   - Nếu buffer src dài hơn buffer dst thì điều này sẽ gây ra buffer overflow.
 - `strncpy`: chỉ copy `n` kí tự từ buffer src sang buffer dst. 
 
+## Hàm memcmp
